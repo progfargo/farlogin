@@ -22,7 +22,7 @@ if case you want to play with:
 * install nginx and use it as reverse proxy. proxy pass all request to your domain to farlogin app. there is a sample proxy config in asset directory.
 * import the farlogin database to mysql on the same machine farlogin app is running.
 * copy fladmin to the computer of admin user.
-* make the necessary changes in farlogin.ini file. app will work on localhost initially. if you want to run it on a server which has a public domain name you should change the ini file accordingly.
+* make the necessary changes in farlogin.ini file. app will work on localhost initially. if you want to run it on a server which has a public domain name you should change the ini file accordingly and dont forget to change the nats url in the app.go files for farlogin, fladmin and flnode.
 * after running farlogin web app, login and create a node by giving it a name.
 * run flnode in remote machine (if you run farlogin app in localhost, just open a terminal and run the flnode from command line for a simple test) as a deamon and give it the same node name via command line parameter.
 * you will see the node online in farlogin web app after a couple of seconds.
