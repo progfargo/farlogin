@@ -6,7 +6,7 @@ it uses embedded nats.io server for communication.
 
 i got this idea from this page: https://dev.to/napicella/linux-terminals-tty-pty-and-shell-192e
 
-this method can be used to access nodes, especially during the development of iot projects. this saves us from using static ip.
+this method can be used to access nodes, especially during the development of iot projects.
 
 it provides ease of use in case of a large number of nodes (hundreds), and can simplify asset management because it works independently of ip addresses.
 
