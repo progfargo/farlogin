@@ -1,0 +1,118 @@
+//alert
+.alert {
+    margin-top: @u3;
+    padding: @u5 @u5;
+    position: relative;
+    border-radius: 4px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    i.buttonClose {
+        padding: @u3;
+        position: absolute;
+        top: @u3;
+        right: @u3;
+        font-size: @f5;
+        font-weight: bold;
+        background-color: inherit;
+        color: @grey;
+    }
+
+    i.buttonClose:hover {
+        color: @textColor;
+    }
+
+    p {
+        margin-top: @u3;
+    }
+
+    p:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.alertMixin(@color) {
+    background-color: tint(@color, 75);
+    border-color: tint(@color, 65);
+}
+
+.alertDefault {
+    .alertMixin(tint(@grey, 50));
+}
+
+.alertPrimary {
+    .alertMixin(@primary);
+}
+
+.alertAccent {
+    .alertMixin(@accent);
+}
+
+.alertInfo {
+    .alertMixin(@info);
+}
+
+.alertSuccess {
+    .alertMixin(@success);
+}
+
+.alertWarning {
+    .alertMixin(@warning);
+}
+
+.alertError {
+    .alertMixin(@error);
+}
+
+//callout
+.callout {
+    padding: @u5 @u4;
+    border: 1px solid darken(@white, 15%);
+    border-left-width: @u2;
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: @u4;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.calloutMixin(@color) {
+    border-left-color: @color;
+
+    & h4 {
+        color: darken(@color, 10);
+    }
+}
+
+.calloutDefault {
+    .calloutMixin(@default);
+}
+
+.calloutPrimary {
+    .calloutMixin(@primary);
+}
+
+.calloutSuccess {
+    .calloutMixin(@success);
+}
+
+.calloutInfo {
+    .calloutMixin(@info);
+}
+
+.calloutWarning {
+    .calloutMixin(@warning);
+}
+
+.calloutError {
+    .calloutMixin(@error);
+}

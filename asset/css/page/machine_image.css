@@ -1,0 +1,7 @@
+body#machineImagePage main table tr td i.fa-check,
+body#machineImagePage main table tr th i.fa-check {
+  color: #28a745;
+}
+body#machineImagePage main table tr th span.allCropped {
+  font-weight: normal;
+}

@@ -1,0 +1,6 @@
+body#nodeDisplayPage main table td div.deleteConfirm {
+  display: none;
+}
+body#nodeDisplayPage main table td.sessionId {
+  font-family: monospace;
+}

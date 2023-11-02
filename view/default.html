@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{.lang}}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+	<meta name="description" content="">
+	<link rel="icon" href="/asset/img/favicon.ico">
+	
+	<title>{{if .htmlTitle}}{{.htmlTitle}}{{end}}</title>
+	
+	{{.css | raw}}
+</head>
+
+{{if .pageName}}<body id="{{.pageName}}">{{else}}<body>{{end}}
+
+  <div class="leftMenu">
+    {{if .leftMenu}}{{.leftMenu | raw}}{{end}}
+    {{if .userInfo}}{{.userInfo | raw}}{{end}}
+    {{if .logo}}{{.logo | raw}}{{end}}
+  </div>
+
+  <header>
+  	<div class="topMenuButton"><i class="fa fa-bars"></i></div>
+  	<div class="leftMenuButton"><i class="fa fa-bars"></i></div>
+  	
+  	{{if .siteTitle}}
+  		{{.siteTitle | raw}}
+  	{{end}}
+  	
+  	
+  	{{if .topMenu}}
+  		{{.topMenu | raw}}
+  	{{end}}
+  	
+  	{{if .search}}
+  		{{.search | raw}}
+  	{{end}}
+  </header>
+
+	<main>
+		<div class="siteMessage">
+			{{if .message}}
+				<div class="row">
+					<div class="col">
+						{{.message | raw}}
+					</div>
+				</div>
+			{{end}}
+		</div>
+		
+	  {{if .midContent}}{{.midContent | raw}}	{{end}}
+		
+		<div class="row footer">
+			{{if .footerMenu}}
+				<div class="col footerMenu">
+						{{.footerMenu | raw}}
+				</div>
+			{{end}}
+			
+			{{if .footerNote}}
+				<div class="col footerNote">
+						{{.footerNote | raw}}
+				</div>
+			{{end}}
+		</div>
+	</main>
+
+
+  {{if .initJs}}
+    {{.initJs | raw}}
+  {{end}}
+	{{.js | raw}}
+</body>
+
+</html>

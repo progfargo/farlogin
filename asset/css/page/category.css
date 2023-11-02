@@ -1,0 +1,13 @@
+body#categoryPage table tbody span.expandIcon,
+body#categoryPage table tbody span.collapseIcon {
+  padding-right: 0.61804697rem;
+}
+body#categoryPage table tbody span.expandIcon {
+  display: none;
+}
+body#categoryPage table tbody td.name {
+  cursor: pointer;
+}
+body#categoryPage table tbody td div.deleteConfirm {
+  display: none;
+}

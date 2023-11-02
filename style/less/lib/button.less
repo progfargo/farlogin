@@ -1,0 +1,174 @@
+.button,
+button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: @u2 @u4;
+    font-size: @f4;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+    background-color: @white;
+    cursor: pointer;
+    color: @textColor;
+
+    i.fa-solid,
+    i.far {
+        margin-right: @u2;
+    }
+
+    i.right {
+        margin-right: 0;
+        margin-left: @u2;
+    }
+
+    i.left {
+        margin-left: 0;
+        margin-right: @u2;
+    }
+}
+
+.buttonMixin(@color, @bgColor) {
+    color: @color;
+    background-color: @bgColor;
+
+    &.selected {
+        background-color: shade(@bgColor, 5);
+        font-weight: bold;
+        .boxShadow(1);
+    }
+
+    &:focus,
+    &:hover {
+        color: fadeOut(@color, 10);
+        background-color: shade(@bgColor, 5);
+        .boxShadow(2);
+    }
+}
+
+.buttonDefault {
+    .buttonMixin(fadeOut(@textColor, 15), shade(@white, 10));
+}
+
+.buttonPrimary {
+    .buttonMixin(fadeOut(@white, 10), @primary);
+}
+
+.buttonAccent {
+    .buttonMixin(fadeOut(@white, 10), @accent);
+}
+
+.buttonInfo {
+    .buttonMixin(fadeOut(@white, 10), @info);
+}
+
+.buttonSuccess {
+    .buttonMixin(fadeOut(@white, 10), @success);
+}
+
+.buttonWarning {
+    .buttonMixin(fadeOut(@black, 40), @warning);
+}
+
+.buttonError {
+    .buttonMixin(fadeOut(@white, 10), @error);
+}
+
+.buttonXs {
+    padding: @u2 @u3;
+    font-size: @f3;
+}
+
+.buttonSm {
+    padding: @u3 @u4;
+    font-size: @f4;
+}
+
+.buttonMd {
+    padding: @u4 @u5;
+    font-size: @f5;
+
+    i.fa-solid {
+        margin-right: @u2;
+    }
+}
+
+.buttonGroupFixed {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .button {
+        margin: 0 @u2 0 0;
+    }
+
+    .button:last-child {
+        margin-right: 0;
+    }
+}
+
+.buttonGroupFlex {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    * {
+        margin: 0 @u2 @u1 0;
+    }
+
+    *:last-child {
+        margin-right: 0;
+    }
+}
+
+.buttonBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .button {
+        margin-right: 0;
+        border-radius: 0;
+    }
+
+    &>*:first-child,
+    &>*:first-child .button {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    &>*:last-child,
+    &>*:last-child .button {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+
+.dropdownMenu {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdownList {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: @u4;
+    border: 1px solid shade(@white, 15);
+    border-radius: 6px;
+    background-color: @white;
+    z-index: 100;
+    .boxShadow(2);
+
+    a.button {
+        display: block;
+        margin: 0 0 @u4 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

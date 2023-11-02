@@ -1,0 +1,72 @@
+.panel {
+    margin-top: @u4;
+
+    .panelHeading {
+        padding: 0;
+        border: 1px solid transparent;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        h3 {
+            margin: 0;
+            padding: @u3;
+            color: fadeOut(@white, 20);
+        }
+    }
+
+    .panelBody {
+        padding: @u4 @u6 @u6 @u6;
+        background-color: @bgColor;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+
+        p {
+            margin-top: @u4;
+        }
+    }
+
+    .panelFooter {
+        margin: @u6 0;
+        padding: 0 @u6;
+        background-color: lighten(@grey, 20);
+        border-bottom-right-radius: 1px;
+        border-bottom-left-radius: 1px;
+    }
+}
+
+.panelMixin(@color) {
+
+    &>.panelHeading {
+        border-color: darken(@color, 10%);
+        background-color: @color;
+    }
+
+    .panelBody {
+        border-color: darken(@color, 10%);
+    }
+}
+
+.panelDefault {
+    .panelMixin(@leftMenuColor);
+}
+
+.panelPrimary {
+    .panelMixin(@primary);
+}
+
+.panelSuccess {
+    .panelMixin(@success);
+}
+
+.panelInfo {
+    .panelMixin(@info);
+}
+
+.panelWarning {
+    .panelMixin(@warning);
+}
+
+.panelError {
+    .panelMixin(@error);
+}

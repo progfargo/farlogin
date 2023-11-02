@@ -1,0 +1,18 @@
+body#campaignCropImagePage .imgInfo .infoTitle {
+  font-weight: 700;
+}
+body#campaignCropImagePage .imgInfo .dimention {
+  color: #28a745;
+  font-weight: 700;
+}
+body#campaignCropImagePage .imgInfo .invalidDim {
+  color: #dc3545;
+}
+body#campaignCropImagePage .imgWidth,
+body#campaignCropImagePage .imgHeight {
+  display: none;
+}
+body#campaignCropImagePage button[type='submit']:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+}

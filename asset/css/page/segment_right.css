@@ -1,0 +1,32 @@
+body#segmentRightPage table {
+  margin-top: 0;
+}
+body#segmentRightPage table tbody {
+  display: none;
+}
+body#segmentRightPage table tbody tr:first-child th {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+body#segmentRightPage table thead tr.segmentHeader {
+  border: 1px solid #dcddde;
+  cursor: pointer;
+}
+body#segmentRightPage table thead tr.segmentHeader th {
+  background-color: #f4f5f7;
+}
+body#segmentRightPage table thead tr.segmentHeader th .accordionIcon {
+  float: right;
+  font-size: 1.728rem;
+  color: #545b62;
+}
+body#segmentRightPage table thead tr.segmentHeader th .accordionIcon:hover {
+  color: #25282b;
+}
+body#segmentRightPage table thead tr.segmentHeader th .selectAll,
+body#segmentRightPage table thead tr.segmentHeader th .selectNone,
+body#segmentRightPage table thead tr.segmentHeader th .selectReverse {
+  display: none;
+}
+body#segmentRightPage table:not(:first-of-type) {
+  margin-top: 1.618rem;
+}

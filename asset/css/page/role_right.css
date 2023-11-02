@@ -1,0 +1,32 @@
+body#roleRightPage table {
+  margin-top: 0;
+}
+body#roleRightPage table tbody {
+  display: none;
+}
+body#roleRightPage table tbody tr:first-child th {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+body#roleRightPage table thead tr.roleHeader {
+  border: 1px solid #dcddde;
+  cursor: pointer;
+}
+body#roleRightPage table thead tr.roleHeader th {
+  background-color: #f4f5f7;
+}
+body#roleRightPage table thead tr.roleHeader th .accordionIcon {
+  float: right;
+  font-size: 1.728rem;
+  color: #545b62;
+}
+body#roleRightPage table thead tr.roleHeader th .accordionIcon:hover {
+  color: #25282b;
+}
+body#roleRightPage table thead tr.roleHeader th .selectAll,
+body#roleRightPage table thead tr.roleHeader th .selectNone,
+body#roleRightPage table thead tr.roleHeader th .selectReverse {
+  display: none;
+}
+body#roleRightPage table:not(:first-of-type) {
+  margin-top: 1.618rem;
+}

@@ -1,0 +1,59 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.col {
+    flex-basis: 100%;
+    padding: @u3 @u4;
+}
+
+.colSpan {
+    margin-top: 0;
+    padding: 0;
+}
+
+/* XSmall Size Devices, Phones */
+@media only screen and (min-width: @screenXs) {
+    .setCol(xs, @gridCount);
+}
+
+/* Small Size Devices, Phones */
+@media only screen and (min-width: @screenSm) {
+    .setCol(sm, @gridCount);
+
+    .row {
+        padding: 0 @u3;
+    }
+}
+
+/* Middle Size Devices, Tablets */
+@media only screen and (min-width: @screenMd) {
+    .setCol(md, @gridCount);
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: @screenLg) {
+    .setCol(lg, @gridCount);
+}
+
+/* Extra Large Devices, Wide Screens */
+@media only screen and (min-width: @screenXl) {
+    .setCol(xl, @gridCount);
+}
+
+@gridCount: 12;
+
+.setCol(@size, @num) when (@num > 0) {
+    .setCol(@size, @num - 1);
+
+    .@{size}@{num} {
+        flex-basis: unit((100 / @gridCount) * @num, %);
+    }
+}
+
+.noGrow {
+    flex-basis: initial;
+}

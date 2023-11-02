@@ -1,0 +1,5 @@
+body#textContentImagePage table tbody td.textContentImage img {
+  max-width: 100%;
+  min-width: 170px;
+  height: auto;
+}

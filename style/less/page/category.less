@@ -1,0 +1,27 @@
+@import "../lib/vars.less";
+
+body#categoryPage {
+    table {
+        tbody {
+
+            span.expandIcon,
+            span.collapseIcon {
+                padding-right: @u3;
+            }
+
+            span.expandIcon {
+                display: none;
+            }
+
+            td {
+                &.name {
+                    cursor: pointer;
+                }
+
+                div.deleteConfirm {
+                    display: none;
+                }
+            }
+        }
+    }
+}

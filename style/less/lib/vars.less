@@ -1,0 +1,91 @@
+//colors
+@blue: #007bff;
+@indigo: #6610f2;
+@purple: #6f42c1;
+@pink: #e83e8c;
+@red: #dc3545;
+@orange: #fd7e14;
+@yellow: #ffc107;
+@green: #28a745;
+@teal: #20c997;
+@cyan: #17a2b8;
+@white: #fff;
+@grey: #6c757d;
+@black: #000000;
+@grey-dark: #343a40;
+
+@primary: #007bff;
+@secondary: #6c757d;
+@success: #28a745;
+@info: #17a2b8;
+@warning: #ffc107;
+@error: #dc3545;
+@light: #f8f9fa;
+@dark: #343a40;
+@accent: @orange;
+@default: #a0a9ab;
+
+@bgColor: @white;
+@textColor: fadeOut(@black, 20);
+@linkColor: darken(@primary, 10);
+
+@leftMenuColor: tint(#2a4058, 95);
+@leftMenuWidth: @u10 * 1.1;
+
+@headerColor: #1c2834;
+
+@gold: 1.618;
+
+@u1: @u2 / @gold;
+@u2: @u3 / @gold;
+@u3: @u4 / @gold;
+@u4: unit(1, rem);
+@u5: @u4 * @gold;
+@u6: @u5 * @gold;
+@u7: @u6 * @gold;
+@u8: @u7 * @gold;
+@u9: @u8 * @gold;
+@u10: @u9 * @gold;
+@u11: @u10 * @gold;
+@u12: @u11 * @gold;
+@u13: @u12 * @gold;
+@u14: @u13 * @gold;
+@u15: @u14 * @gold;
+@u16: @u15 * @gold;
+@u17: @u16 * @gold;
+@u18: @u17 * @gold;
+@u19: @u18 * @gold;
+@u20: @u19 * @gold;
+
+@fg: 1.2;
+
+@f2: @f3 / @fg;
+@f3: @f4 / @fg;
+@f4: unit(1, rem);
+@f5: @f4 * @fg;
+@f6: @f5 * @fg;
+@f7: @f6 * @fg;
+@f8: @f7 * @fg;
+@f9: @f8 * @fg;
+@f10: @f9 * @fg;
+@f11: @f10 * @fg;
+
+@screenXs: 320px;
+@screenSm: 425px;
+@screenMd: 768px;
+@screenLg: 1024px;
+@screenXl: 1440px;
+
+@titleFont: Bitter;
+@textFont: Helvetica;
+
+//mixings
+.boxShadow(@level: 1) {
+    & when (@level =1) {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    & when (@level =2) {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05), 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+}

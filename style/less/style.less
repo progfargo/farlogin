@@ -1,0 +1,86 @@
+@import "./lib/start.less";
+@import "./lib/vars.less";
+@import "./lib/font.less";
+@import "./lib/typo.less";
+@import "./lib/button.less";
+@import "./lib/label.less";
+@import "./lib/left_menu.less";
+@import "./lib/grid.less";
+@import "./lib/form.less";
+@import "./lib/alert.less";
+@import "./lib/header.less";
+@import "./lib/table.less";
+@import "./lib/panel.less";
+@import "./lib/pagination.less";
+@import "./lib/tab.less";
+@import "./lib/footer.less";
+
+
+body {
+    color: @textColor;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    font-family: @textFont, Arial, sans-serif;
+    text-rendering: optimizeLegibility !important;
+    font-size: @f4;
+}
+
+main {
+    padding: 0;
+    padding-top: 68px;
+    transition: padding-left 0.2s;
+}
+
+/* Middle Size Devices, Tablets */
+@media only screen and (min-width: @screenMd) {
+    main {
+        padding-left: @leftMenuWidth + @u2;
+    }
+}
+
+.pageTitle {
+    padding-bottom: 0;
+
+    h3 {
+        margin-top: @u2;
+        padding: @u3 @u4;
+        background-color: @primary;
+        border-radius: 4px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: fadeOut(@white, 10);
+    }
+}
+
+.copyLink,
+.iconLink {
+    margin-left: @u2;
+    padding: 0 @u1;
+    cursor: pointer;
+    color: @grey;
+
+    &:hover {
+        color: darken(@grey, 20);
+    }
+}
+
+.downloadLink {
+    padding: 0 @u1;
+    cursor: pointer;
+}
+
+.copyClipboard {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.confirmCommand {
+    margin-top: 0;
+}
+
+.siteMessage .row {
+    .col:first-child {
+        margin-top: @u4;
+    }
+}

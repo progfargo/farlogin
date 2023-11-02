@@ -1,0 +1,6 @@
+body#productCategoryPage table tbody td.name {
+  cursor: pointer;
+}
+body#productCategoryPage table tbody td div.deleteConfirm {
+  display: none;
+}

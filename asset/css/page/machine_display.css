@@ -1,0 +1,4 @@
+body#machineDisplayPage main ul {
+  list-style: circle;
+  list-style-position: inside;
+}

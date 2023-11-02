@@ -1,0 +1,10 @@
+body#loginPage main {
+  margin: 0;
+  padding: 5vh 0 0 0;
+}
+/* Middle Size Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  body#loginPage main {
+    padding-left: 0;
+  }
+}

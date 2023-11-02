@@ -1,0 +1,53 @@
+a {
+    color: @linkColor;
+    text-decoration: none;
+}
+
+p {
+    margin-top: @u4;
+    line-height: @f4 * @gold;
+
+    &.readMore {
+        margin-top: 0;
+        color: darken(saturate(@primary, 30), 10);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: @u4;
+    font-family: Bitter, Arial, sans-serif;
+    color: inherit;
+}
+
+h1 {
+    font-size: @f7;
+    line-height: @f7 * @gold;
+}
+
+h2 {
+    font-size: @f6;
+    line-height: @f6 * @gold;
+}
+
+h3 {
+    font-size: @f5;
+    line-height: @f5 * @gold;
+}
+
+h4 {
+    font-size: @f4;
+    line-height: @f4 * @gold;
+}
+
+pre,
+code {
+    margin-top: @u4;
+    font-family: monospace;
+}
+
+.find {
+    background-color: tint(@error, 70);
+}

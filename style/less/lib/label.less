@@ -1,0 +1,56 @@
+.label {
+    display: inline-block;
+    padding: @u1 @u3;
+    line-height: 1;
+    font-size: @f3;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.labelMixin(@color) {
+    background-color: fadeOut(@color, 70);
+}
+
+.labelDefault {
+    .labelMixin(@default);
+}
+
+.labelPrimary {
+    .labelMixin(@primary);
+}
+
+.labelAccent {
+    .labelMixin(@accent);
+}
+
+.labelInfo {
+    .labelMixin(@info);
+}
+
+.labelSuccess {
+    .labelMixin(@success);
+}
+
+.labelWarning {
+    .labelMixin(@warning);
+}
+
+.labelError {
+    .labelMixin(@error);
+}
+
+.labelXs {
+    padding: @u2 @u3;
+    font-size: @f3
+}
+
+.labelSm {
+    padding: @u2 @u4;
+    font-size: @f4
+}
+
+.labelMd {
+    padding: @u4 @u5;
+    font-size: @f5;
+}

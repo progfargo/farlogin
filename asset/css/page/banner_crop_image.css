@@ -1,0 +1,18 @@
+body#bannerCropImagePage .imgInfo .infoTitle {
+  font-weight: 700;
+}
+body#bannerCropImagePage .imgInfo .dimention {
+  color: #28a745;
+  font-weight: 700;
+}
+body#bannerCropImagePage .imgInfo .invalidDim {
+  color: #dc3545;
+}
+body#bannerCropImagePage .imgWidth,
+body#bannerCropImagePage .imgHeight {
+  display: none;
+}
+body#bannerCropImagePage button[type='submit']:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+}

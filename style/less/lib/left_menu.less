@@ -1,0 +1,161 @@
+.leftMenu {
+    padding-right: 2px;
+    position: fixed;
+    top: @u7;
+    left: -@leftMenuWidth;
+    width: @leftMenuWidth;
+    height: 100%;
+    background-color: @leftMenuColor;
+    border-right: 2px solid darken(@leftMenuColor, 20);
+    z-index: 100;
+    overflow: auto;
+    .boxShadow(2);
+    transition: left 0.2s;
+
+    a {
+        display: block;
+        padding: (@u3 * 1.2) 0;
+        color: @textColor;
+        font-size: @f4;
+
+        i {
+            width: @u6 * 0.8;
+            color: fadeOut(@textColor, 12);
+
+            &.menuIcon {
+                font-size: @f5;
+            }
+        }
+
+        .subMenuButton {
+            padding: 0 @u5 @u1 @u2;
+            font-size: @f5;
+            float: right;
+            color: lighten(@textColor, 15);
+            transition: left 0.2s;
+        }
+    }
+
+    nav {
+        margin-top: @u5;
+    }
+
+    nav>ul {
+
+        li {
+            .subMenu {
+                display: block;
+            }
+
+            a {
+                padding-left: @u5;
+            }
+
+            &.active>a {
+                padding-left: @u5 - @u3;
+                background-color: darken(@leftMenuColor, 3%);
+                border-left: @u3 solid @error;
+            }
+
+            &>a:hover {
+                padding-left: @u5 - @u3;
+                background-color: darken(@leftMenuColor, 3%);
+                border-left: @u3 solid @warning;
+            }
+
+            ul {
+                display: none;
+
+                &.subMenuShow {
+                    display: block;
+                }
+
+                li {
+                    background-color: darken(@leftMenuColor, 7%);
+
+                    a {
+                        padding-left: @u6;
+                    }
+
+                    &.active>a {
+                        padding-left: @u6 - @u3;
+                        background-color: darken(@leftMenuColor, 7%);
+                        border-left: @u3 solid @error;
+                    }
+
+                    &>a:hover {
+                        padding-left: @u6 - @u3;
+                        background-color: darken(@leftMenuColor, 11%);
+                        border-left: @u3 solid @warning;
+                    }
+
+                    ul {
+                        li {
+                            background-color: darken(@leftMenuColor, 11%);
+
+                            a {
+                                padding-left: @u7;
+                            }
+
+                            &.active a {
+                                padding-left: @u7 - @u3;
+                                background-color: darken(@leftMenuColor, 11%);
+                                border-left: @u3 solid @error;
+                            }
+
+                            &>a:hover {
+                                padding-left: @u7 - @u3;
+                                background-color: darken(@leftMenuColor, 15%);
+                                border-left: @u3 solid @warning;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        margin-top: @u6;
+        padding: 0 @u4 @u4 @u5;
+
+        a {
+            padding: 0;
+        }
+
+        img {
+            height: @u7;
+        }
+    }
+
+    .userInfo {
+        margin-top: @u4;
+        margin-left: @u5;
+        font-family: monospace;
+
+        p {
+            margin: 0;
+            white-space: nowrap;
+
+            a {
+                display: inline-block;
+                margin-left: @u3;
+
+                i:hover {
+                    color: @accent;
+                }
+            }
+        }
+    }
+
+    &.leftMenuShow {
+        left: 0;
+    }
+}
+
+/* Middle Size Devices, Tablets */
+@media only screen and (min-width: @screenMd) {
+    .leftMenu {
+        left: 0;
+    }
+}

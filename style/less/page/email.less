@@ -1,0 +1,340 @@
+//vars
+@primary: #0090c5;
+@success: #5cb85c;
+@info: #5bc0de;
+@warning: #f0ad4e;
+@error: #ff4486;
+@accent: #fd7e14;
+
+@gray1: #F7FAFC;
+@gray2: #EDF2F7;
+@gray3: #E2E8F0;
+@gray4: #CBD5E0;
+@gray5: #A0AEC0;
+@gray6: #718096;
+@gray7: #4A5568;
+@gray8: #2D3748;
+@gray9: #1A202C;
+
+@textColor: #696969;
+@titleColor: #444444;
+@linkColor: #0090c5;
+
+@titleFont: 'Nunito', monospace;
+@textFont: 'Nunito Sans', monospace;
+@logoFont: 'Changa One', monospace;
+
+@bigGutter: @u10;
+
+@topMenuSize: 280px;
+
+//grid break points
+@screenXs: 321px;
+@screenSm: 426px;
+@screenMd: 769px;
+@screenLg: 1025px;
+@screenXl: 1441px;
+
+//geometry
+@uc: 1.618;
+
+@u1: @u2 / @uc;
+@u2: @u3 / @uc;
+@u3: @u4 / @uc;
+@u4: @u5 / @uc;
+@u5: @u6 / @uc;
+@u6: 1rem;
+@u7: @u6 * @uc;
+@u8: @u7 * @uc;
+@u9: @u8 * @uc;
+@u10: @u9 * @uc;
+@u11: @u10 * @uc;
+@u12: @u11 * @uc;
+@u13: @u12 * @uc;
+@u14: @u13 * @uc;
+@u15: @u14 * @uc;
+@u16: @u15 * @uc;
+@u17: @u16 * @uc;
+
+//font
+@fc: 1.15;
+
+@f1: @f2 / @fc;
+@f2: @f3 / @fc;
+@f3: @f4 / @fc;
+@f4: @f5 / @fc;
+@f5: @f6 / @fc;
+@f6: 1rem;
+@f7: @f6 * @fc;
+@f8: @f7 * @fc;
+@f9: @f8 * @fc;
+@f10: @f9 * @fc;
+@f11: @f10 * @fc;
+@f12: @f11 * @fc;
+@f13: @f12 * @fc;
+@f14: @f13 * @fc;
+@f15: @f14 * @fc;
+@f16: @f15 * @fc;
+
+//mixings
+.boxShadowBottom(@level: 1) {
+    & when (@level =1) {
+        box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    & when (@level =2) {
+        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.boxShadowRight(@level: 1) {
+    & when (@level =1) {
+        box-shadow: 8px 0 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    & when (@level =2) {
+        box-shadow: 8px 0 6px -6px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.boxShadow(@level: 1) {
+    & when (@level =1) {
+        box-shadow: 0 2px 4px tint(@gray5, 50), 0 2px 4px tint(@gray5, 50);
+    }
+
+    & when (@level =2) {
+        box-shadow: 0 4px 8px @gray5, 0 4px 8px @gray5;
+    }
+}
+
+//buttons
+.btn,
+button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: @u2 @u7;
+    font-size: @f4;
+    text-align: center;
+    border-radius: @u3;
+    background-color: white;
+    cursor: pointer;
+    color: @textColor;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    i.fas,
+    i.far {
+        padding-top: @u2;
+    }
+
+    i.right {
+        float: right;
+        margin-left: @u4;
+    }
+
+    i.left {
+        float: left;
+        margin-right: @u4;
+    }
+
+}
+
+.btnMixin(@color, @bgColor) {
+    color: @color;
+    background-color: @bgColor;
+
+    &.selected {
+        background-color: shade(@bgColor, 5);
+        font-weight: bold;
+        .boxShadowBottom(1);
+    }
+
+    &:focus,
+    &:hover {
+        color: tint(@color, 10);
+        background-color: shade(@bgColor, 5);
+        .boxShadowBottom(2);
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.btnDefault {
+    .btnMixin(@titleColor, shade(white, 5));
+}
+
+.btnPrimary {
+    .btnMixin(tint(white, 10), @primary);
+}
+
+.btnAccent {
+    .btnMixin(tint(white, 10), @accent);
+}
+
+.btnInfo {
+    .btnMixin(tint(white, 10), @info);
+}
+
+.btnSuccess {
+    .btnMixin(tint(white, 10), @success);
+}
+
+.btnWarning {
+    .btnMixin(tint(white, 10), @warning);
+}
+
+.btnError {
+    .btnMixin(tint(white, 10), @error);
+}
+
+.btnXs {
+    padding: @u4 @u5;
+    font-size: @f3;
+}
+
+.btnSm {
+    padding: @u5 @u6;
+    font-size: @f6;
+}
+
+.btnMd {
+    padding: @u6 @u7;
+    font-size: @f7;
+}
+
+.btnLg {
+    padding: @u7 @u8;
+    font-size: @f8;
+}
+
+.btnBlock {
+    display: inline-block;
+    width: 100%;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Middle Devices */
+@media only screen and (min-width: @screenMd) {
+    .btnBlock {
+        padding: @u6 @u7;
+        font-size: @f7;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: @screenLg) {
+    .btnBlock {
+        text-align: left;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: @screenXl) {
+    .btnBlock {
+        padding: @u7 @u8;
+        font-size: @f8;
+        text-align: left;
+    }
+}
+
+//email
+
+body {
+    font-family: monospace;
+
+    table {
+        width: 100%;
+        max-width: @screenLg * 0.9;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: @textFont;
+        font-size: @f5;
+        line-height: 1.618;
+        border: 1px solid @gray3;
+        border-collapse: collapse;
+
+        tr {
+            display: block;
+            padding-left: @u8;
+            padding-right: @u8;
+
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            &.header {
+                text-align: center;
+
+                p.logo {
+                    display: inline-block;
+                    margin-top: @u8;
+                    margin-bottom: 0;
+                    padding: @u5 @u6;
+                    color: white;
+                    background-color: @error;
+                    font-family: @logoFont;
+                    font-size: @f8;
+                    font-weight: 400;
+                    border-radius: @u3;
+                    letter-spacing: 1.5px;
+                    white-space: nowrap;
+
+                    a {
+                        color: inherit;
+                    }
+                }
+
+                p.author {
+                    margin-top: @u3;
+                    font-weight: 700;
+                    font-size: @f4;
+                    white-space: nowrap;
+                }
+            }
+
+            &.message {
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                &.first {
+                    padding-top: @u4;
+                }
+
+                &.last {
+                    padding-bottom: @u8;
+                }
+
+                background-color: white;
+
+                &.button {
+                    padding-top: @u7;
+                    padding-bottom: @u7;
+
+                    text-align: center;
+                }
+            }
+
+            &.copyright {
+                padding-top: @u5;
+                padding-bottom: @u5;
+                background-color: white;
+            }
+
+            &.seperator {
+                border-top: 1px solid @gray3;
+            }
+        }
+
+        a {
+            color: @linkColor;
+            text-decoration: none;
+        }
+    }
+}

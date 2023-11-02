@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="icon" href="/asset/img/favicon.ico">
+
+    <title>{{if .htmlTitle}}{{.htmlTitle}}{{end}}</title>
+
+    {{.css | raw}}
+</head>
+
+{{if .pageName}}<body id="{{.pageName}}">{{else}}<body>{{end}}
+
+    <main>
+		{{if .message}}
+			<div class="row">
+				<div class="col colSpan md2 lg3 xl4"></div>
+				<div class="col md8 lg6 xl4">
+					{{.message | raw}}
+				</div>
+				<div class="col colSpan md2 lg3 xl4"></div>
+			</div>
+		{{end}}
+		
+		{{if .midContent}}{{.midContent | raw}}{{end}}
+		
+		{{if .footer}}
+			<div class="row">
+				<div class="col colSpan md2 lg3 xl4"></div>
+				<div class="col md8 lg6 xl4 footer">
+					{{.footer | raw}}
+				</div>
+				<div class="col colSpan md2 lg3 xl4"></div>
+			</div>
+		{{end}}
+		
+    </main>
+
+    {{.js | raw}}
+</body>
+
+</html>

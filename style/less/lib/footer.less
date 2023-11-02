@@ -1,0 +1,37 @@
+.footer {
+    margin-top: @u6;
+    color: @grey;
+    flex-wrap: wrap;
+
+    .footerNote {
+        display: flex;
+        justify-content: flex-start;
+        border-top: 2px solid shade(@white, 30);
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    .footerMenu {
+        margin-right: @u4;
+        white-space: nowrap;
+        overflow: hidden;
+
+        i.fa-solid,
+        i.fab {
+            padding-right: @u4;
+        }
+
+        a {
+            padding: @u4 @u4 0 0;
+            display: inline-block;
+            color: lighten(@textColor, 25);
+
+            &:hover,
+            &.active {
+                color: @textColor;
+            }
+        }
+    }
+}

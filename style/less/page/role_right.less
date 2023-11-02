@@ -1,0 +1,48 @@
+@import "../lib/vars.less";
+
+body#roleRightPage {
+    table {
+        margin-top: 0;
+
+        tbody {
+            display: none;
+
+            tr:first-child {
+                th {
+                    background-color: fadeOut(@primary, 90);
+                }
+            }
+        }
+
+        thead {
+            tr.roleHeader {
+                border: 1px solid shade(@leftMenuColor, 10);
+                cursor: pointer;
+
+                th {
+                    background-color: @leftMenuColor;
+
+                    .accordionIcon {
+                        float: right;
+                        font-size: @f7;
+                        color: darken(@grey, 10);
+
+                        &:hover {
+                            color: darken(@grey, 30);
+                        }
+                    }
+
+                    .selectAll,
+                    .selectNone,
+                    .selectReverse {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:not(:first-of-type) {
+            margin-top: @u5;
+        }
+    }
+}
