@@ -10,7 +10,7 @@ this method can be used to access nodes, especially during the development of io
 
 it provides ease of use in case of a large number of nodes (hundreds), and can simplify asset management because it works independently of ip addresses.
 
-*what else can be done:*
+**what else can be done:**
 in a real installation, https should be used and all communication should be via tls.
 
 flnode (the agent copied to the node) can be conditionally compiled so that it runs only on a specific machine (by cpu id etc.).
@@ -19,8 +19,8 @@ in addition to tls, two-way encryption can be used as an additional security mea
 
 if case you want to play with:
 
-* install nginx and use it as reverse proxy. proxy pass all request to your domain to farlogin app. there is a sample proxy config in asset directory.
-* import the farlogin database to mysql on the same machine farlogin app is running.
+* install nginx and use it as reverse proxy. proxy pass all request to your domain to farlogin app. there is a sample proxy config in main folder.
+* import the farlogin database to mysql on the same machine farlogin app is running. db dump file is in main folder.
 * copy fladmin to the computer of admin user.
 * make the necessary changes in farlogin.ini file. app will work on localhost initially. if you want to run it on a server which has a public domain name you should change the ini file accordingly and dont forget to change the nats url in the app.go files for farlogin, fladmin and flnode.
 * after running farlogin web app, login and create a node by giving it a name.
