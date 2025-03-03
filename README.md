@@ -8,7 +8,7 @@ I got this idea from this page: https://dev.to/napicella/linux-terminals-tty-pty
 
 This method can be used to access nodes, especially during the development of iot projects.
 
-It provides ease of use in case of a large number of nodes (hundreds), and can simplify asset management because it works independently of ip addresses.
+It provides ease of use in case of a large number of nodes (hundreds), and can simplify asset management. It eliminates the need to use a gateway modem for a remote node.
 
 **What else can be done:**
 In a real installation, https should be used and all communication should be via TLS.
