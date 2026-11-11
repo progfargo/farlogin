@@ -24,7 +24,7 @@ In case you want to play with:
 * Install nginx and use it as reverse proxy. Proxy pass all request to your domain to *farlogin* app. There is a sample proxy config in main folder.
 * Import the *farlogin* database to mysql on the same machine *farlogin* app is running. Db dump file is in main folder.
 * copy *fladmin* to the computer of admin user.
-* Make the necessary changes in farlogin.ini file. App will work on localhost initially. if you want to run it on a server which has a public domain name you should change the ini file accordingly and don't forget to change the nats url in the app.go files for *farlogin*, *fladmin* and *flnode*.
+* Copy *farlogin.sample.ini* to *farlogin.ini* and make the necessary changes in it (farlogin.ini is not in the repository). App will work on localhost initially. if you want to run it on a server which has a public domain name you should change the ini file accordingly and don't forget to change the nats url in the app.go files for *farlogin*, *fladmin* and *flnode*.
 * After running *farlogin* web app, login and create a node by giving it a name.
 * Run *flnode* in remote machine (if you run *farlogin* app in localhost, just open a terminal and run the *flnode* from command line for a simple test) as a deamon and give it the same node name via command line parameter.
 * You will see the node online in *farlogin* web app after a couple of seconds.
