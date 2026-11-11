@@ -1,5 +1,7 @@
 # Farlogin
 
+> **Note:** farlogin is the first implementation of the idea and can be used as an example Go project. The more mature, ready-to-use version of the product is [termgate](https://github.com/progfargo/termgate).
+
 Provides access to a machine that does not have a static ip. It allows you to use the terminal screen of the remote machine.
 
 It uses embedded nats.io server for communication.
